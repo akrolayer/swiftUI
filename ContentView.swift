@@ -10,7 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("ハローワールド")
+        VStack {
+            VStack {
+                HStack {
+                    Text("おはよう")
+                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+                }
+            }
+            HStack {
+                Text("おはよう")
+                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+                Text("Placeholder")
+            }
+            HStack {
+                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+            }
+            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+            HStack {
+                Text("hello world")
+                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
+            }
+        }
     }
 }
 
