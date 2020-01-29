@@ -11,27 +11,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            VStack {
-                HStack {
-                    Text("おはよう")
-                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                    Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                }
-            }
-            HStack {
-                Text("おはよう")
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                Text("Placeholder")
-            }
-            HStack {
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-            }
-            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-            HStack {
-                Text("hello world")
-                Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-            }
+            Text("bicycle for the mind")
+                .font(.title)
+                .fontWeight(.thin)
+            Text("知性の自転車")
+            .foregroundColor(Color.red)
+            Text("春はあけぼの。やうやう白くなりゆく、山ぎはすこしあかりて、紫だちたる雲の細くたなびきたる")
+                .multilineTextAlignment(.trailing)
+                .lineLimit(2)
+                .frame(width: 200.0, height: 100.0,alignment: .bottomTrailing)
+                .border(Color.green, width: 5)
+                .font(.system(size:150))
         }
+        .foregroundColor(.blue)
     }
 }
 
