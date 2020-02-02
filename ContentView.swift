@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            Spacer()
             Text("bicycle for the mind")
                 .font(.title)
                 .fontWeight(.thin)
@@ -22,8 +23,34 @@ struct ContentView: View {
                 .frame(width: 200.0, height: 100.0,alignment: .bottomTrailing)
                 .border(Color.green, width: 5)
                 .font(.system(size:150))
+            Image("first")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .scaleEffect(1.8)
+                .offset(x:-70,y:-30)
+                .frame(width: 200,height: 300)
+                .clipped()
+                .overlay(
+                    Text("春はあけぼの。")
+                    .font(.title)
+                    .fontWeight(.title)
+                        .forgroundColor(Color.white)
+            )
+            Spacer()
+            VStack(alignment: .leading){
+                
+                
+                Text("夏は夜")
+                Text("秋は夕暮れ")
+                    .padding(.top, 80)
+                Text("冬はつとめて")
+                    .offset(x:-10,y:10)
+            }
+            Spacer()
         }
+            
         .foregroundColor(.blue)
+        
     }
 }
 
