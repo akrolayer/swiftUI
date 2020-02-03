@@ -10,47 +10,70 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Spacer()
             Text("bicycle for the mind")
                 .font(.title)
                 .fontWeight(.thin)
             Text("知性の自転車")
             .foregroundColor(Color.red)
-            Text("春はあけぼの。やうやう白くなりゆく、山ぎはすこしあかりて、紫だちたる雲の細くたなびきたる")
+            Text("春はあけぼの。やうやう白くなりゆく、山ぎは")
                 .multilineTextAlignment(.trailing)
                 .lineLimit(2)
                 .frame(width: 200.0, height: 100.0,alignment: .bottomTrailing)
                 .border(Color.green, width: 5)
-                .font(.system(size:150))
+                .font(.system(size:10))
             Image("first")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .scaleEffect(1.8)
                 .offset(x:-70,y:-30)
-                .frame(width: 200,height: 300)
+                .frame(width: 100,height: 200)
                 .clipped()
                 .overlay(
                     Text("春はあけぼの。")
                     .font(.title)
-                    .fontWeight(.title)
-                        .forgroundColor(Color.white)
+                    .fontWeight(.light)
+                        .foregroundColor(Color.black)
+                        .offset(x:0,y:-50)
             )
-            Spacer()
-            VStack(alignment: .leading){
-                
-                
-                Text("夏は夜")
-                Text("秋は夕暮れ")
-                    .padding(.top, 80)
-                Text("冬はつとめて")
-                    .offset(x:-10,y:10)
+            HStack{
+                    Circle()
+                        .foregroundColor(.red)
+                        .frame(width:50,height: 50)
+                    Ellipse()
+                        .stroke()
+                        .foregroundColor(.red)
+                        .frame(width:50,height: 100)
+                    Rectangle()
+                    .foregroundColor(.red)
+                    .frame(width:50,height: 50)
+                    RoundedRectangle(cornerRadius: 50)
+                        .foregroundColor(.red)
+                        .frame(width:100, height:50)
+                    Capsule()
+                        .foregroundColor(.red)
+                        .frame(width:200,height:150)
+                        .rotationEffect(.degrees(45))
+                    .clipped()
             }
-            Spacer()
+        ZStack{
+            Ellipse()
+                .stroke(lineWidth:4)
+                .foregroundColor(.pink)
+                .frame(width:100,height:300)
+            Ellipse()
+            .stroke(lineWidth: 4)
+                .foregroundColor(.purple)
+                .frame(width:100,height:300)
+                .rotationEffect(.degrees(30),anchor:.bottom)
+            Ellipse()
+            .stroke(lineWidth: 4)
+                .foregroundColor(.green)
+                .frame(width:100,height:300)
+                .rotationEffect(.degrees(-30),anchor: .bottom)
         }
-            
-        .foregroundColor(.blue)
-        
+        }
     }
 }
 
