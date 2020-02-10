@@ -10,11 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        List(photoArray) { item in
-            RowView(photo: item)
+        NavigationView{
+            List(photoArray) { item in
+                NavigationLink(destination: PhotoDataView(photo: item)){
+                RowView(photo: item)
+                }
+            }
+            .navigationBarTitle(Text("写真リスト"))
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

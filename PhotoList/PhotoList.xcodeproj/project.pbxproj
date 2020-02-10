@@ -16,6 +16,7 @@
 		E1D4199423F05A54004E45B6 /* PhotoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4199323F05A54004E45B6 /* PhotoListTests.swift */; };
 		E1D4199F23F05AD7004E45B6 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4199E23F05AD7004E45B6 /* PhotoData.swift */; };
 		E1D419A123F05D71004E45B6 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D419A023F05D71004E45B6 /* RowView.swift */; };
+		E1D419A323F19E70004E45B6 /* PhotoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D419A223F19E70004E45B6 /* PhotoDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		E1D4199523F05A54004E45B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1D4199E23F05AD7004E45B6 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
 		E1D419A023F05D71004E45B6 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		E1D419A223F19E70004E45B6 /* PhotoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E1D4198223F05A54004E45B6 /* Assets.xcassets */,
 				E1D4199E23F05AD7004E45B6 /* PhotoData.swift */,
 				E1D419A023F05D71004E45B6 /* RowView.swift */,
+				E1D419A223F19E70004E45B6 /* PhotoDataView.swift */,
 				E1D4198723F05A54004E45B6 /* LaunchScreen.storyboard */,
 				E1D4198A23F05A54004E45B6 /* Info.plist */,
 				E1D4198423F05A54004E45B6 /* Preview Content */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D4197D23F05A52004E45B6 /* AppDelegate.swift in Sources */,
+				E1D419A323F19E70004E45B6 /* PhotoDataView.swift in Sources */,
 				E1D419A123F05D71004E45B6 /* RowView.swift in Sources */,
 				E1D4197F23F05A52004E45B6 /* SceneDelegate.swift in Sources */,
 				E1D4199F23F05AD7004E45B6 /* PhotoData.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RowView.swift
+//  PhotoDataView.swift
 //  PhotoList
 //
 //  Created by 岡本怜也 on 2020/02/10.
@@ -8,23 +8,22 @@
 
 import SwiftUI
 
-struct RowView: View {
+struct PhotoDataView: View {
     var photo:PhotoData
     
     var body: some View {
-        HStack{
+        VStack{
             Image(photo.imageName)
-                .resizable()
-                .frame(width:80,height:80)
             Text(photo.title)
             Spacer()
         }
+    .padding()
+        .navigationBarTitle(Text(verbatim: photo.title),displayMode: .inline)
     }
 }
 
-struct RowView_Previews: PreviewProvider {
+struct PhotoDataView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView(photo:photoArray[0])
-            .previewLayout(.fixed(width:300,height:80))
+        PhotoDataView(photo:photoArray[0])
     }
 }
