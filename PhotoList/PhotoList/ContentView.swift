@@ -10,6 +10,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        Button(action: {}){
+            Text("button")
+        }
+        /*
+        NavigationView{
+            VStack(alignment: .leading, spacing: 5){
+                Image("1").resizable().aspectRatio(contentMode: .fit).frame(height:200)
+                NavigationLink(destination:SubView()){
+                    Text("とまチョップ")
+                }
+                .padding(.bottom)
+                
+                Image("2").resizable().aspectRatio(contentMode: .fit).frame(height:200)
+                NavigationLink(destination:SubView2()){
+                    Text("湘南の風景")
+                    }
+                }.navigationBarTitle("人気スポット")
+        }
+ */
+        /*
         NavigationView{
             List(photoArray) { item in
                 NavigationLink(destination: PhotoDataView(photo: item)){
@@ -18,6 +38,7 @@ struct ContentView: View {
             }
             .navigationBarTitle(Text("写真リスト"))
         }
+ */
     }
 }
 
