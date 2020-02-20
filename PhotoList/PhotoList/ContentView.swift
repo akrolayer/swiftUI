@@ -11,10 +11,32 @@ import SwiftUI
 struct ContentView: View {
     //@State var num:Int = 0
     //@State var msg = "Thank you!"
-    @State var iLike = true
-    @State var isFast = true
+    //@State var iLike = true
+    //@State var isFast = true
+    @State var kosu:Int = 0
+    let tanka = 240
+    let tax = 0.1
     
     var body: some View {
+        VStack(alignment: .leading, spacing: 20){
+    Text("５個ずつ３０個まで、１個\(self.tanka)円").font(.headline)
+            
+            Stepper(
+                onIncrement:{
+                    self.kosu += 5
+                    self.kosu = min(self.kosu, 30)
+                },
+                onDecrement:{
+                    self.kosu -= 5
+                    self.kosu = max(self.kosu, 0)
+                },
+                label: {Text("個数:\(self.kosu)")}
+            )
+            .frame(width:200)
+            Text("料金:\(calc(self.kosu))円[税込]").underline()
+            
+        }
+        /*
         VStack{
             Toggle(isOn: $iLike) {
                 Text("Like or not").font(.largeTitle)
@@ -60,7 +82,7 @@ struct ContentView: View {
             }
             .imageScale(.large)
         }
-            
+            */
         /*
         VStack{
             Button("Tap"){
@@ -119,6 +141,12 @@ struct ContentView: View {
             .navigationBarTitle(Text("写真リスト"))
         }
  */
+    }
+    func calc (_ num:Int) -> Int{
+        let price = self.tanka * num
+        print(num)
+        let result = Double(price) * (1+self.tax)
+        return Int(result)
     }
 }
 
