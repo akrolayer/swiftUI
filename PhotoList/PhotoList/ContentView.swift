@@ -13,14 +13,61 @@ struct ContentView: View {
     //@State var msg = "Thank you!"
     //@State var iLike = true
     //@State var isFast = true
-    @State var kosu:Int = 0
+    //@State var kosu:Int = 0
     let tanka = 240
     let tax = 0.1
-    @State var volume:Double = 0.0
-    @State var R:Double = 0
-    @State var G:Double = 0
-    @State var B:Double = 0
+    //@State var volume:Double = 0.0
+    //@State var R:Double = 0
+    //@State var G:Double = 0
+    //@State var B:Double = 0
+    //@State private var selectedColor = 0
+    //let colorViews = [Color.red,  Color.green,Color.blue]
+    //let colorNames = ["Red", "Green", "Blue"]
+    @State var selectedSize = 2
+    @State var selectedColor = 0
+    let sizes = ["XS","S","N","L","LL"]
+    let colors = ["Red", "Green", "Blue", "Yellow", "Pink", "White"]
     var body: some View {
+        VStack{
+            HStack{
+                Picker(selection: $selectedSize,label: Text("")){
+                        ForEach(0..<sizes.count){index in Text(self.sizes[index]).tag(index)
+                        }
+                    }
+                .frame(width:200)
+                
+                Picker(selection: $selectedColor, label: Text("")) {
+                        ForEach(0..<colors.count){index in Text(self.colors[index]).tag(index)
+                    }
+                }
+                .frame(width:200)
+                .onAppear(perform:{self.selectedColor = self.colors.count/2})
+                }
+            HStack{                Text("size:\(sizes[selectedSize])").padding(.horizontal, 40)
+            Text("color:\(colors[selectedColor])").padding(.horizontal, 30)
+            }
+            .foregroundColor(Color.white)
+            .font(.headline)
+            .background(RoundedRectangle(cornerRadius: 20)
+            .frame(width:300,height:40)
+            .foregroundColor(Color.gray))
+        }
+        /*
+        VStack{
+        Picker(selection: $selectedColor, label:Text("Color")) {
+            Text("Red").tag(0)
+            Text("Green").tag(1)
+            Text("blue").tag(2)
+            }
+            
+            HStack{                colorViews[selectedColor].frame(width:50,height:100)
+            Text("value:\(selectedColor)").frame(width:60)
+            Text("\(colorNames[selectedColor])").frame(width: 70)
+            }
+        }
+    .padding()
+ */
+        /*
         VStack(alignment: .center){
             Circle()
                 .frame(width: 100,height: 100)
@@ -48,6 +95,7 @@ struct ContentView: View {
                 Slider(value: $B, in:0...255).frame(width:200)
             }
         }
+ */
         /*
         HStack{
             Text("\(format(volume))").frame(width: 100)
