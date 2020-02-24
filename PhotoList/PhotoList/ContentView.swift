@@ -27,7 +27,26 @@ struct ContentView: View {
     @State var selectedColor = 0
     let sizes = ["XS","S","N","L","LL"]
     let colors = ["Red", "Green", "Blue", "Yellow", "Pink", "White"]
+    let colorViews = [Color.red,Color.green,Color.blue]
+    
     var body: some View {
+        VStack {
+            Picker(selection: $selectedColor, label: Text("Color")) {
+                Text("Red").tag(0)
+                Text("Green").tag(1)
+                Text("Blue").tag(2)
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            
+            symbolImage(num: selectedColor)
+            .resizable()
+            .foregroundColor(colorViews[selectedColor])
+            .frame(width:100, height: 100)
+            .padding()
+        }
+    .padding()
+    
+        /*
         VStack{
             HStack{
                 Picker(selection: $selectedSize,label: Text("")){
@@ -52,6 +71,7 @@ struct ContentView: View {
             .frame(width:300,height:40)
             .foregroundColor(Color.gray))
         }
+ */
         /*
         VStack{
         Picker(selection: $selectedColor, label:Text("Color")) {
@@ -242,6 +262,14 @@ struct ContentView: View {
     func format(_ num:Double)->String{
         let result = String(round(num*100)/100)
         return result
+    }
+    func symbolImage(num:Int)-> Image{
+        switch num{
+        case 0: return Image(systemName: "r.circle")
+        case 1: return Image(systemName: "g.circle")
+        case 2: return Image(systemName: "b.circle")
+        default: return Image(systemName: "r.circle")
+        }
     }
 }
 
