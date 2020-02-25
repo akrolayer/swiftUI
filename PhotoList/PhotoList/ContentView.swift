@@ -28,8 +28,61 @@ struct ContentView: View {
     let sizes = ["XS","S","N","L","LL"]
     let colors = ["Red", "Green", "Blue", "Yellow", "Pink", "White"]
     let colorViews = [Color.red,Color.green,Color.blue]
+    @State var theDate = Date()
+    var dateformat: DateFormatter{
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "ja_JP")
+        df.dateStyle = .full
+        df.timeStyle = .short
+        return df
+    }
+    @Environment(\.locale) var locale:Locale
+    @State var name: String = ""
     
     var body: some View {
+        VStack {
+            TextField("お名前は？", text: $name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 250)
+            
+            if(!name.isEmpty){
+                Text("\(name)さん、こんにちは！")
+            }
+        }
+        /*
+        //VStack{
+        Form{
+            Text(dateformat.string(from: theDate))
+                .font(.headline)
+            
+           DatePicker(selection: $theDate,
+                      displayedComponents: .date,
+                      label:{Text("日付")})
+                    .environment(\.locale,Locale(identifier: "ja_JP"))
+            
+          DatePicker(selection: $theDate,
+                    displayedComponents: .hourAndMinute,
+                    label:{Text("時刻")})
+                    .environment(\.locale,Locale(identifier: "ja_JP"))
+        }
+        */
+        /*
+        VStack{
+            Text(dateformat.string(from: theDate))
+                .font(.headline)
+            Divider()
+            
+            DatePicker(selection: $theDate, label: {Text("日時")})
+        }.padding()
+        */
+        /*
+        VStack {
+            Text("日時は」\(theDate)").padding()
+            DatePicker(selection: $theDate, label: { Text("日時") })
+        }
+ */
+ 
+        /*
         VStack {
             Picker(selection: $selectedColor, label: Text("Color")) {
                 Text("Red").tag(0)
@@ -45,7 +98,7 @@ struct ContentView: View {
             .padding()
         }
     .padding()
-    
+    */
         /*
         VStack{
             HStack{
