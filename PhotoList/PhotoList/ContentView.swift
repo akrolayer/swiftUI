@@ -8,14 +8,23 @@
 
 import SwiftUI
 
+extension UIApplication{
+    func endEditing(){
+        sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil, from: nil, for: nil
+        )
+    }
+}
+
 struct ContentView: View {
     //@State var num:Int = 0
     //@State var msg = "Thank you!"
     //@State var iLike = true
     //@State var isFast = true
     //@State var kosu:Int = 0
-    let tanka = 240
-    let tax = 0.1
+    //let tanka = 240
+    //let tax = 0.1
     //@State var volume:Double = 0.0
     //@State var R:Double = 0
     //@State var G:Double = 0
@@ -38,8 +47,38 @@ struct ContentView: View {
     }
     @Environment(\.locale) var locale:Locale
     @State var name: String = ""
+    @State var kosu: String = ""
+    let tanka:Double = 250
+    let tax:Double = 1.1
     
     var body: some View {
+        ZStack{
+            Color.white.onTapGesture {
+                UIApplication.shared.endEditing()
+            }
+            VStack(alignment: .leading){
+                HStack{
+                    Text("個数：").padding(.horizontal, 0)
+                    TextField("0", text: $kosu) .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .keyboardType(.numberPad)
+                        .frame(width: 100)
+                }
+                .font(.title)
+                .frame(width: 200)
+                Group{
+                    if kosuCheck(min: 1, max: 10){
+                        Text("\(price())円です")
+                            .font(.title)
+                    }else{
+                        Text("個数は１〜１０を入れてください")
+                            .foregroundColor(.red)
+                            .font(.headline)
+                    }
+                }.frame(width: 300, height: 30)
+            }
+            .position(x:200,y :200)
+        }
+        /*
         VStack {
             TextField("お名前は？", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -49,6 +88,7 @@ struct ContentView: View {
                 Text("\(name)さん、こんにちは！")
             }
         }
+ */
         /*
         //VStack{
         Form{
@@ -306,11 +346,27 @@ struct ContentView: View {
         }
  */
     }
+    /*
     func calc (_ num:Int) -> Int{
         let price = self.tanka * num
         print(num)
         let result = Double(price) * (1+self.tax)
         return Int(result)
+    }
+ */
+    func kosuCheck(min:Int, max:Int)->Bool{
+        guard let num = Int(kosu) else{
+            return false
+        }
+        return (num>=min && num<=max)
+    }
+    func price()->Int{
+        if let num = Double(kosu){
+            let result = Int(tanka * num * tax)
+            return result
+        }else{
+            return -1
+        }
     }
     func format(_ num:Double)->String{
         let result = String(round(num*100)/100)
