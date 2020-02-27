@@ -10,7 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isError: Bool = false
+    @State var isSheet: Bool = false
     var body: some View {
+        Button(action: {
+            self.isSheet = true
+        }) {
+            Text("Action Sheetテスト")
+        }.actionSheet(isPresented: $isSheet){
+            ActionSheet(title: Text("タイトル"),
+                        message: Text("メッセージ文"),
+                        buttons:[
+                            .default(Text("ボタン1"),action: {}),
+                            .default(Text("ボタン2"),action: {}),
+                            .destructive(Text("削除"),action: {}),
+                            .cancel(Text("キャンセル"), action: {})
+                ])
+        }
+        /*
         VStack{
             Button(action:{
                 self.isError = true
@@ -25,6 +41,7 @@ struct ContentView: View {
                     secondaryButton: .cancel(Text("キャンセル"), action: {}))
             })
         }
+ */
     }
 }
 func okAction(){
