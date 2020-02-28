@@ -11,7 +11,36 @@ import SwiftUI
 struct ContentView: View {
     @State var isError: Bool = false
     @State var isSheet: Bool = false
+    @State var isModal: Bool = false
     var body: some View {
+        Button(action:{
+            self.isModal = true
+        }){
+            Text("Sheetテスト")
+        }
+        .sheet(isPresented: $isModal) {
+            SomeView()
+        }
+        /*
+        Button(action: {
+            self.isSheet = true
+        }) {
+            Text("削除")
+                .foregroundColor(.white)
+                .background(Capsule()
+                    .foregroundColor(.red)
+                    .frame(width: 100,height: 30))
+            }.actionSheet(isPresented: $isSheet){
+            ActionSheet(title: Text("削除しますか？"),
+                buttons:[
+                    .destructive(Text("削除"),action:{
+                        deleteProcess()
+                    }),
+                    .cancel(Text("キャンセル"),action:{})
+                ])
+        }
+ */
+        /*
         Button(action: {
             self.isSheet = true
         }) {
@@ -26,6 +55,7 @@ struct ContentView: View {
                             .cancel(Text("キャンセル"), action: {})
                 ])
         }
+ */
         /*
         VStack{
             Button(action:{
@@ -46,6 +76,9 @@ struct ContentView: View {
 }
 func okAction(){
     print("削除ボタンが選ばれた")
+}
+func deleteProcess(){
+    print("削除しました")
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

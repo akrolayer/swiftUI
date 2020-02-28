@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E162056924095D9A0014135D /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162056824095D9A0014135D /* SomeView.swift */; };
 		E1F6CB4A2406B66100AF66FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CB492406B66100AF66FA /* AppDelegate.swift */; };
 		E1F6CB4C2406B66100AF66FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CB4B2406B66100AF66FA /* SceneDelegate.swift */; };
 		E1F6CB4E2406B66100AF66FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F6CB4D2406B66100AF66FA /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E162056824095D9A0014135D /* SomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeView.swift; sourceTree = "<group>"; };
 		E1F6CB462406B66100AF66FA /* Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1F6CB492406B66100AF66FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1F6CB4B2406B66100AF66FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				E1F6CB492406B66100AF66FA /* AppDelegate.swift */,
 				E1F6CB4B2406B66100AF66FA /* SceneDelegate.swift */,
 				E1F6CB4D2406B66100AF66FA /* ContentView.swift */,
+				E162056824095D9A0014135D /* SomeView.swift */,
 				E1F6CB4F2406B66700AF66FA /* Assets.xcassets */,
 				E1F6CB542406B66700AF66FA /* LaunchScreen.storyboard */,
 				E1F6CB572406B66700AF66FA /* Info.plist */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E162056924095D9A0014135D /* SomeView.swift in Sources */,
 				E1F6CB4A2406B66100AF66FA /* AppDelegate.swift in Sources */,
 				E1F6CB4C2406B66100AF66FA /* SceneDelegate.swift in Sources */,
 				E1F6CB4E2406B66100AF66FA /* ContentView.swift in Sources */,
