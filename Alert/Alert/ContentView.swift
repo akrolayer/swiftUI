@@ -12,14 +12,22 @@ struct ContentView: View {
     @State var isError: Bool = false
     @State var isSheet: Bool = false
     @State var isModal: Bool = false
+    @State var counter: Int = 0
+    
     var body: some View {
-        Button(action:{
-            self.isModal = true
-        }){
-            Text("Sheetテスト")
-        }
-        .sheet(isPresented: $isModal) {
-            SomeView()
+        VStack{
+            Button(action:{
+                self.isModal = true
+            }){
+                Text("Sheetテスト")
+            }
+            .sheet(isPresented: $isModal, onDismiss: {self.countUp()}){
+                SomeView()
+            }
+            .disabled(counter >= 3)
+            Text("回数:\(counter)")
+                .font(.title)
+            .padding()
         }
         /*
         Button(action: {
@@ -73,6 +81,9 @@ struct ContentView: View {
         }
  */
     }
+    func countUp(){
+        self.counter += 1
+    }
 }
 func okAction(){
     print("削除ボタンが選ばれた")
@@ -80,6 +91,7 @@ func okAction(){
 func deleteProcess(){
     print("削除しました")
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

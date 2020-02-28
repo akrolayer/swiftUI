@@ -9,11 +9,19 @@
 import SwiftUI
 
 struct SomeView: View {
+    @Environment(\.presentationMode) var presentation
+    
     var body: some View {
         VStack{
+            Spacer()
             Text("プレゼンテーション")
             Image(systemName: "gift")
                 .imageScale(.large).padding()
+            Spacer()
+            Button(action: {self.presentation.wrappedValue.dismiss()
+            }) {
+                Text("OK").font(.title)
+            }.padding()
         }
     }
 }
