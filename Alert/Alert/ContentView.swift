@@ -15,6 +15,41 @@ struct ContentView: View {
     @State var counter: Int = 0
     
     var body: some View {
+        ScrollView(.horizontal, showsIndicators: false){
+            HStack{
+                ForEach(photoArray){ photoData in
+                    PhotoView(photo:photoData)
+                }
+            }
+        }
+        /*
+        ScrollView(.horizontal){
+            HStack{
+                ForEach(0..<10){ num in
+                    Page(str: String(num))
+                }
+            }
+        }
+ */
+        /*
+        ScrollView{
+            VStack{
+                ForEach(0..<6){ num in
+                    Page(str: String(num))
+                }
+            }
+        }
+ */
+        /*
+        ScrollView{
+            VStack{
+                ForEach(photoArray){ photoData in
+                    PhotoView(photo:photoData)
+                }
+            }
+        }
+ */
+        /*
         VStack{
             Button(action:{
                 self.isModal = true
@@ -29,6 +64,7 @@ struct ContentView: View {
                 .font(.title)
             .padding()
         }
+ */
         /*
         Button(action: {
             self.isSheet = true
@@ -91,7 +127,22 @@ func okAction(){
 func deleteProcess(){
     print("削除しました")
 }
-
+struct Page: View{
+    let w:CGFloat = UIScreen.main.bounds.width*3/5
+    let h:CGFloat = 200
+    let str:String
+    
+    var body: some View{
+        ZStack{
+            Color.gray
+                .frame(width: w, height: w)
+                .cornerRadius(8)
+            Text(str)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+        }
+    }
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
