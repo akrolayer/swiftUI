@@ -11,6 +11,7 @@ import SwiftUI
 struct PhotoView: View {
     var photo:PhotoData
     let w:CGFloat = UIScreen.main.bounds.width - 100
+    @State private var selection = 0
     
     var body: some View {
         VStack{
@@ -25,6 +26,7 @@ struct PhotoView: View {
                 .font(.caption)
                 .padding()
         }
+ 
         .padding()
         /*
         VStack{

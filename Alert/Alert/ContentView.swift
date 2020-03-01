@@ -13,8 +13,41 @@ struct ContentView: View {
     @State var isSheet: Bool = false
     @State var isModal: Bool = false
     @State var counter: Int = 0
+    @State private var selection = 0
     
     var body: some View {
+        TabView(selection: $selection){
+            Text("First View")
+                .font(.title)
+                .tabItem{
+                    VStack{
+                        Image("first")
+                        Text("First")
+                    }
+                }
+                .tag(0)
+            
+        Text("Second View")
+            .font(.title)
+            .tabItem{
+                VStack{
+                    Image("second")
+                    Text("Second")
+                }
+            }
+            .tag(1)
+            
+        Text("Third View")
+            .font(.title)
+            .tabItem{
+                VStack{
+                    Image("third")
+                    Text("Third")
+                }
+            }
+            .tag(2)
+        }
+        /*
         ScrollView(.horizontal, showsIndicators: false){
             HStack{
                 ForEach(photoArray){ photoData in
@@ -22,6 +55,7 @@ struct ContentView: View {
                 }
             }
         }
+ */
         /*
         ScrollView(.horizontal){
             HStack{
