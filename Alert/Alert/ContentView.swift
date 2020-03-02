@@ -17,26 +17,20 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            Text("First View")
-                .font(.title)
+            FirstView()
                 .tabItem{
-                    VStack{
-                        Image("first")
-                        Text("First")
-                    }
+                    Image("first")
+                    Text("First")
                 }
                 .tag(0)
             
-        Text("Second View")
-            .font(.title)
-            .tabItem{
-                VStack{
+                SecondView()
+                .tabItem{
                     Image("second")
                     Text("Second")
                 }
-            }
-            .tag(1)
-            
+                .tag(1)
+        /*
         Text("Third View")
             .font(.title)
             .tabItem{
@@ -46,6 +40,7 @@ struct ContentView: View {
                 }
             }
             .tag(2)
+ */
         }
         /*
         ScrollView(.horizontal, showsIndicators: false){
