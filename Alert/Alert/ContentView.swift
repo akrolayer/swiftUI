@@ -14,8 +14,38 @@ struct ContentView: View {
     @State var isModal: Bool = false
     @State var counter: Int = 0
     @State private var selection = 0
+    @State var isMyChecked1: Bool = false
+    @State var isMyChecked2: Bool = false
+    @State var kingaku:String = ""
+    @State var ninzu:String = ""
     
     var body: some View {
+        VStack{
+            NumberTextField(title: "金額", number: $kingaku)
+            NumberTextField(title: "人数", number: $ninzu)
+        }
+        /*
+        VStack {
+            HStack{
+                Text("担当者1のチェック")
+                CheckMarkPerson(isChecked: $isMyChecked1)
+            }
+            HStack{
+                Text("担当者2のチェック")
+                CheckMarkPerson(isChecked: $isMyChecked2)
+            }
+            if isMyChecked1 && isMyChecked2{
+                Text("全員チェック済み")
+                    .foregroundColor(.blue)
+                    .padding()
+            }else{
+                Text("チェック待ち")
+                    .foregroundColor(.red)
+                    .padding()
+            }
+        }
+ */
+        /*
         TabView(selection: $selection){
             FirstView()
                 .tabItem{
@@ -30,6 +60,7 @@ struct ContentView: View {
                     Text("Second")
                 }
                 .tag(1)
+ */
         /*
         Text("Third View")
             .font(.title)
@@ -40,8 +71,8 @@ struct ContentView: View {
                 }
             }
             .tag(2)
+         }
  */
-        }
         /*
         ScrollView(.horizontal, showsIndicators: false){
             HStack{
@@ -150,6 +181,23 @@ struct ContentView: View {
         self.counter += 1
     }
 }
+
+struct CheckMarkPerson: View{
+    @Binding var isChecked: Bool
+    
+    var body: some View{
+        Button(action: {
+            self.isChecked.toggle()
+        }) {
+            Image(systemName: isChecked ?
+                "person.crop.circle.badge.checkmark" :
+                "person.crop.circle")
+                .foregroundColor(isChecked ? .blue : .gray)
+        }
+        .imageScale(.large)
+        .frame(width:40)
+    }
+}
 func okAction(){
     print("削除ボタンが選ばれた")
 }
@@ -174,6 +222,14 @@ struct Page: View{
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group{
+            NumberTextField(title: "テスト", number: .constant("123"))
+                .previewDevice("iPhone Xs")
+            NumberTextField(title: "テスト", number: .constant("-123"))
+                .previewDevice("iPhone SE")
+            NumberTextField(title: "テスト", number: .constant("abc"))
+                .previewDevice("iPhone S")
+        }
+        
     }
 }
