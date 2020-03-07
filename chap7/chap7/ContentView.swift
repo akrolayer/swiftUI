@@ -9,9 +9,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var stopwatch = Stopwatch()
+    //@ObservedObject var stopwatch = Stopwatch()
+    
+    @EnvironmentObject var shareData: ShareData
+    @State var isModal: Bool = false
     
     var body: some View {
+        VStack {
+            // 現在の設定
+            HStack {
+                Text(shareData.yesNo ? "Yes":"No")
+                Text(String(repeating: "★", count: shareData.num))
+                    .foregroundColor(shareData.yesNo ? .green : .gray)
+            }.font(.title)
+            // 設定シートを表示する
+            Button(action: {
+                self.isModal = true
+            }) {
+                Text("[ 設定の変更 ]")
+                .padding()
+            }
+            .sheet(isPresented: $isModal){
+                // モーダルビューに共有データを渡す
+                SettingView().environmentObject(self.shareData)
+            }
+        }
+
+        /*
         VStack{
             HStack{
                 Button(action: {
@@ -35,6 +59,7 @@ struct ContentView: View {
             }.frame(width: 200)
             Text("\(self.stopwatch.counter)")
         }.font(.largeTitle)
+ */
     }
 }
 

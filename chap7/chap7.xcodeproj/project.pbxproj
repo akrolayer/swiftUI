@@ -15,6 +15,8 @@
 		E159DEDD240FF4B600F576D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E159DEDB240FF4B600F576D2 /* LaunchScreen.storyboard */; };
 		E159DEE8240FF4B600F576D2 /* chap7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DEE7240FF4B600F576D2 /* chap7Tests.swift */; };
 		E159DEF5240FF78F00F576D2 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DEF4240FF78F00F576D2 /* Stopwatch.swift */; };
+		E159DEF72413BE4D00F576D2 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DEF62413BE4D00F576D2 /* ShareData.swift */; };
+		E159DEF92413C25400F576D2 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E159DEF82413C25400F576D2 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		E159DEE7240FF4B600F576D2 /* chap7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chap7Tests.swift; sourceTree = "<group>"; };
 		E159DEE9240FF4B600F576D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E159DEF4240FF78F00F576D2 /* Stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		E159DEF62413BE4D00F576D2 /* ShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
+		E159DEF82413C25400F576D2 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +88,13 @@
 				E159DED0240FF4B400F576D2 /* AppDelegate.swift */,
 				E159DED2240FF4B400F576D2 /* SceneDelegate.swift */,
 				E159DED4240FF4B400F576D2 /* ContentView.swift */,
+				E159DEF82413C25400F576D2 /* SettingView.swift */,
 				E159DED6240FF4B600F576D2 /* Assets.xcassets */,
 				E159DEDB240FF4B600F576D2 /* LaunchScreen.storyboard */,
 				E159DEDE240FF4B600F576D2 /* Info.plist */,
 				E159DED8240FF4B600F576D2 /* Preview Content */,
 				E159DEF4240FF78F00F576D2 /* Stopwatch.swift */,
+				E159DEF62413BE4D00F576D2 /* ShareData.swift */,
 			);
 			path = chap7;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 				E159DED1240FF4B400F576D2 /* AppDelegate.swift in Sources */,
 				E159DED3240FF4B400F576D2 /* SceneDelegate.swift in Sources */,
 				E159DEF5240FF78F00F576D2 /* Stopwatch.swift in Sources */,
+				E159DEF92413C25400F576D2 /* SettingView.swift in Sources */,
+				E159DEF72413BE4D00F576D2 /* ShareData.swift in Sources */,
 				E159DED5240FF4B400F576D2 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
