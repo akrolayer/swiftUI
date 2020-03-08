@@ -15,16 +15,19 @@ struct SettingView: View {
         ZStack{
             Color(red: 0.9,green:0.9,blue:0.9)
                 .edgesIgnoringSafeArea(.all)
-                .overlay(Capsule()
+                .overlay( Capsule()
                     .foregroundColor(.black)
                     .opacity(0.2)
-                    .frame(width: 100, height: 0)
+                    .frame(width: 100, height: 8)
                     .padding()
                     , alignment: .top)
             VStack{
                 Text("値の設定")
                 Toggle(isOn: $shareData.yesNo){
                     Text("Yes/No : \(shareData.yesNo ? "Yes" : "No")")
+                }.frame(width:250)
+                Stepper(value: $shareData.num,in: 1...5){
+                    Text("★:\(shareData.num)")
                 }.frame(width:250)
             }
             .font(.title)
