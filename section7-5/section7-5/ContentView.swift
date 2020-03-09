@@ -9,11 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        SimpleUIView()
+            .frame(width:200, height: 200)
+        /*
         MapView()
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius:10)
             .padding(40)
+ */
     }
 }
 

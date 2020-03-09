@@ -15,6 +15,7 @@
 		E1FD6ED62415396800CBBF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FD6ED42415396800CBBF5F /* LaunchScreen.storyboard */; };
 		E1FD6EE12415396800CBBF5F /* section7_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FD6EE02415396800CBBF5F /* section7_5Tests.swift */; };
 		E1FD6EEC2415397F00CBBF5F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FD6EEB2415397F00CBBF5F /* MapView.swift */; };
+		E1FD6EEE24167E4600CBBF5F /* SimpleUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1FD6EED24167E4600CBBF5F /* SimpleUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		E1FD6EE02415396800CBBF5F /* section7_5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = section7_5Tests.swift; sourceTree = "<group>"; };
 		E1FD6EE22415396800CBBF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FD6EEB2415397F00CBBF5F /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E1FD6EED24167E4600CBBF5F /* SimpleUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E1FD6EC92415396600CBBF5F /* AppDelegate.swift */,
 				E1FD6ECB2415396600CBBF5F /* SceneDelegate.swift */,
 				E1FD6ECD2415396600CBBF5F /* ContentView.swift */,
+				E1FD6EED24167E4600CBBF5F /* SimpleUIView.swift */,
 				E1FD6ECF2415396800CBBF5F /* Assets.xcassets */,
 				E1FD6ED42415396800CBBF5F /* LaunchScreen.storyboard */,
 				E1FD6ED72415396800CBBF5F /* Info.plist */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1FD6ECA2415396600CBBF5F /* AppDelegate.swift in Sources */,
+				E1FD6EEE24167E4600CBBF5F /* SimpleUIView.swift in Sources */,
 				E1FD6EEC2415397F00CBBF5F /* MapView.swift in Sources */,
 				E1FD6ECC2415396600CBBF5F /* SceneDelegate.swift in Sources */,
 				E1FD6ECE2415396600CBBF5F /* ContentView.swift in Sources */,
