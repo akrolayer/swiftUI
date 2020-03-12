@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>9842D359-CB9B-4591-B920-6EF2BB24FFFD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9842D359-CB9B-4591-B920-6EF2BB24FFFD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>section7-5 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>section7-5</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Preview section7-5</string>
+			<key>timeStartedRecording</key>
+			<real>605701662.43353796</real>
+			<key>timeStoppedRecording</key>
+			<real>605701681.32709301</real>
+			<key>title</key>
+			<string>Preview section7-5</string>
+			<key>uniqueIdentifier</key>
+			<string>9842D359-CB9B-4591-B920-6EF2BB24FFFD</string>
+		</dict>
+		<key>FA6CF420-914E-4BDC-B275-61EA40B9DF0A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FA6CF420-914E-4BDC-B275-61EA40B9DF0A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>section7-5 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>section7-5</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Preview section7-5</string>
+			<key>timeStartedRecording</key>
+			<real>605701447.08800602</real>
+			<key>timeStoppedRecording</key>
+			<real>605701453.00337005</real>
+			<key>title</key>
+			<string>Preview section7-5</string>
+			<key>uniqueIdentifier</key>
+			<string>FA6CF420-914E-4BDC-B275-61EA40B9DF0A</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

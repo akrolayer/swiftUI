@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>0909BDB3-98DB-4FFD-ACDC-7272EEC0DAA2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>0909BDB3-98DB-4FFD-ACDC-7272EEC0DAA2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>section7-5-eujslbrgsfzxghhkggqswznyhkgo</string>
+			<key>timeStartedRecording</key>
+			<real>605701662.616189</real>
+			<key>timeStoppedRecording</key>
+			<real>605701680.14014995</real>
+			<key>title</key>
+			<string>Build target section7-5</string>
+			<key>uniqueIdentifier</key>
+			<string>0909BDB3-98DB-4FFD-ACDC-7272EEC0DAA2</string>
+		</dict>
+		<key>DF4B5D3F-3098-477D-9626-927AFEAEF7E9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.bundle</string>
+			<key>fileName</key>
+			<string>DF4B5D3F-3098-477D-9626-927AFEAEF7E9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>section7-5Tests-eujslbrgsfzxghhkggqswznyhkgo</string>
+			<key>timeStartedRecording</key>
+			<real>605701680.14101303</real>
+			<key>timeStoppedRecording</key>
+			<real>605701681.314991</real>
+			<key>title</key>
+			<string>Build target section7-5Tests</string>
+			<key>uniqueIdentifier</key>
+			<string>DF4B5D3F-3098-477D-9626-927AFEAEF7E9</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

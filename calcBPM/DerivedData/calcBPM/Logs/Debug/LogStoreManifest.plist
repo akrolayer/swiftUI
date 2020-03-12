@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>12FC200A-FDA2-4A14-9613-92D1441B8EF3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>12FC200A-FDA2-4A14-9613-92D1441B8EF3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>calcBPM project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>calcBPM</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug calcBPM</string>
+			<key>timeStartedRecording</key>
+			<real>605715569.95856202</real>
+			<key>timeStoppedRecording</key>
+			<real>605715701.24514401</real>
+			<key>title</key>
+			<string>Debug calcBPM</string>
+			<key>uniqueIdentifier</key>
+			<string>12FC200A-FDA2-4A14-9613-92D1441B8EF3</string>
+		</dict>
+		<key>BB248BDA-AC4A-49FD-92B9-4E2C64B46C49</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BB248BDA-AC4A-49FD-92B9-4E2C64B46C49.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>calcBPM project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>calcBPM</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug calcBPM</string>
+			<key>timeStartedRecording</key>
+			<real>605717253.95912695</real>
+			<key>timeStoppedRecording</key>
+			<real>605717416.93851495</real>
+			<key>title</key>
+			<string>Debug calcBPM</string>
+			<key>uniqueIdentifier</key>
+			<string>BB248BDA-AC4A-49FD-92B9-4E2C64B46C49</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

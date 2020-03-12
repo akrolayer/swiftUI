@@ -1,0 +1,9 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "25a72fd302cab841cb88586187de1163"
+build_time: [1584008862, 677611000]
+inputs:
+  "/Users/akrolayer/Desktop/swiftUI/section7-5/section7-5/AppDelegate.swift": [1583677926, 208773267]
+  "/Users/akrolayer/Desktop/swiftUI/section7-5/section7-5/SimpleUIView.swift": [1583761708, 456246275]
+  "/Users/akrolayer/Desktop/swiftUI/section7-5/section7-5/MapView.swift": [1583679308, 773319544]
+  "/Users/akrolayer/Desktop/swiftUI/section7-5/section7-5/SceneDelegate.swift": [1583677926, 239647653]
+  "/Users/akrolayer/Desktop/swiftUI/section7-5/section7-5/ContentView.swift": [1583762017, 975469236]

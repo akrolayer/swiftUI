@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "8ef0d7906a6a139ce276332422549d54"
+build_time: [1584022718, 603545000]
+inputs:
+  "/Users/akrolayer/Desktop/swiftUI/calcBPM/calcBPMTests/calcBPMTests.swift": [1583851744, 147053116]
