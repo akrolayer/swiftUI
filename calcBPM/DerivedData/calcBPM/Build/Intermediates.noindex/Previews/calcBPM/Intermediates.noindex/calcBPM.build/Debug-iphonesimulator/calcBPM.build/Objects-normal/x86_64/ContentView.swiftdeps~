@@ -10,31 +10,80 @@ provides-member:
 - ["7calcBPM20ContentView_PreviewsV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "%"
+- !private "*"
+- !private "*="
+- !private "..."
+- !private "..<"
+- !private "/"
+- !private "/="
+- !private "=="
+- !private ">"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
 - "ContentView"
 - "ContentView_Previews"
-- !private "FloatLiteralType"
-- !private "IntegerLiteralType"
+- "FloatLiteralType"
+- !private "ForEach"
+- "Int"
+- "IntegerLiteralType"
+- !private "Picker"
 - "PreviewProvider"
 - !private "RoundedBorderTextFieldStyle"
 - "State"
 - "String"
 - "StringLiteralType"
+- !private "Text"
 - !private "TextField"
+- "UnicodeScalarType"
+- !private "VStack"
 - "View"
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["SK", "contains"]
+- !private ["SK", "count"]
+- !private ["SK", "subscript"]
+- !private ["Sz", "init"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["SN", "contains"]
+- !private ["Sl", "contains"]
+- !private ["Sl", "count"]
+- !private ["Sl", "subscript"]
+- !private ["7SwiftUI5ColorV", "red"]
+- !private ["SL", "init"]
 - ["7calcBPM11ContentViewV", "$BPM"]
+- ["7calcBPM11ContentViewV", "$Note"]
+- ["7calcBPM11ContentViewV", "$Notes"]
 - ["7calcBPM11ContentViewV", "BPM"]
+- ["7calcBPM11ContentViewV", "BPMIntCheck"]
 - ["7calcBPM11ContentViewV", "Body"]
+- ["7calcBPM11ContentViewV", "Bool"]
+- !private ["7calcBPM11ContentViewV", "ForEach"]
+- ["7calcBPM11ContentViewV", "Int"]
+- ["7calcBPM11ContentViewV", "Note"]
+- ["7calcBPM11ContentViewV", "Notes"]
+- ["7calcBPM11ContentViewV", "NotesList"]
+- !private ["7calcBPM11ContentViewV", "Picker"]
 - !private ["7calcBPM11ContentViewV", "RoundedBorderTextFieldStyle"]
 - ["7calcBPM11ContentViewV", "State"]
 - ["7calcBPM11ContentViewV", "String"]
+- !private ["7calcBPM11ContentViewV", "Text"]
 - !private ["7calcBPM11ContentViewV", "TextField"]
+- !private ["7calcBPM11ContentViewV", "VStack"]
 - ["7calcBPM11ContentViewV", "View"]
 - !private ["7calcBPM11ContentViewV", "_BPM"]
 - ["7calcBPM11ContentViewV", "_Default_Body"]
+- !private ["7calcBPM11ContentViewV", "_Note"]
+- !private ["7calcBPM11ContentViewV", "_Notes"]
 - ["7calcBPM11ContentViewV", "_makeView"]
 - ["7calcBPM11ContentViewV", "_makeViewList"]
 - ["7calcBPM11ContentViewV", "body"]
+- ["7calcBPM11ContentViewV", "calcQuarterNotes"]
 - ["7calcBPM11ContentViewV", "deinit"]
 - ["7calcBPM11ContentViewV", "init"]
 - !private ["7calcBPM20ContentView_PreviewsV", "ContentView"]
@@ -47,8 +96,79 @@ depends-member:
 - ["7calcBPM20ContentView_PreviewsV", "init"]
 - ["7calcBPM20ContentView_PreviewsV", "platform"]
 - ["7calcBPM20ContentView_PreviewsV", "previews"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "headline"]
+- !private ["s28CustomDebugStringConvertibleP", "red"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "headline"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "red"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "red"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "contains"]
+- !private ["Se", "count"]
+- !private ["Se", "headline"]
+- !private ["Se", "init"]
+- !private ["Se", "red"]
+- !private ["Se", "subscript"]
 - ["7SwiftUI15DynamicPropertyP", "init"]
 - ["7SwiftUI15DynamicPropertyP", "wrappedValue"]
+- !private ["7SwiftUI18DynamicViewContentP", "init"]
+- !private ["SE", "contains"]
+- !private ["SE", "count"]
+- !private ["SE", "headline"]
+- !private ["SE", "init"]
+- !private ["SE", "red"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "contains"]
+- !private ["SQ", "count"]
+- !private ["SQ", "font"]
+- !private ["SQ", "foregroundColor"]
+- !private ["SQ", "headline"]
+- !private ["SQ", "init"]
+- !private ["SQ", "numberPad"]
+- !private ["SQ", "red"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "tag"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByIntegerLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "headline"]
+- !private ["s23ExpressibleByNilLiteralP", "red"]
+- !private ["s17FixedWidthIntegerP", "init"]
+- !private ["7SwiftUI4FontV", "headline"]
+- !private ["7SwiftUI7ForEachV", "init"]
+- !private ["7SwiftUI7GestureP", "headline"]
+- !private ["7SwiftUI7GestureP", "red"]
+- !private ["SH", "contains"]
+- !private ["SH", "count"]
+- !private ["SH", "headline"]
+- !private ["SH", "init"]
+- !private ["SH", "numberPad"]
+- !private ["SH", "red"]
+- !private ["SH", "subscript"]
+- !private ["Si", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["SM", "count"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["Sj", "init"]
+- !private ["Sq", "headline"]
+- !private ["Sq", "red"]
+- !private ["7SwiftUI6PickerV", "init"]
 - !private ["7SwiftUI15PreviewProviderP", "ContentView"]
 - ["7SwiftUI15PreviewProviderP", "Previews"]
 - ["7SwiftUI15PreviewProviderP", ""]
@@ -57,24 +177,85 @@ depends-member:
 - ["7SwiftUI15PreviewProviderP", "_previews"]
 - ["7SwiftUI15PreviewProviderP", "platform"]
 - ["7SwiftUI15PreviewProviderP", "previews"]
+- !private ["Sk", "contains"]
+- !private ["Sk", "count"]
+- !private ["Sk", "subscript"]
+- !private ["SX", "contains"]
+- !private ["Sm", "count"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "numberPad"]
 - !private ["7SwiftUI27RoundedBorderTextFieldStyleV", "init"]
+- !private ["s10SIMDScalarP", "init"]
+- !private ["ST", "contains"]
+- !private ["ST", "count"]
+- !private ["ST", "subscript"]
+- !private ["7SwiftUI10ShapeStyleP", "red"]
+- !private ["SZ", "init"]
+- !private ["s13SignedNumericP", "init"]
 - ["7SwiftUI5StateV", "init"]
 - ["7SwiftUI5StateV", "wrappedValue"]
+- !private ["Sx", "init"]
+- !private ["7SwiftUI18LocalizedStringKeyV0D13InterpolationV", "appendInterpolation"]
+- !private ["7SwiftUI18LocalizedStringKeyV0D13InterpolationV", "appendLiteral"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["7SwiftUI4TextV", "font"]
+- !private ["7SwiftUI4TextV", "foregroundColor"]
+- !private ["7SwiftUI4TextV", "init"]
+- !private ["7SwiftUI4TextV", "tag"]
 - !private ["7SwiftUI9TextFieldV", "init"]
 - !private ["7SwiftUI9TextFieldV", "textFieldStyle"]
 - !private ["7SwiftUI14TextFieldStyleP", "init"]
+- !private ["So14UIKeyboardTypeV", "numberPad"]
+- !private ["7SwiftUI6VStackV", "init"]
 - !private ["7SwiftUI4ViewP", "$BPM"]
+- !private ["7SwiftUI4ViewP", "$Notes"]
+- !private ["7SwiftUI4ViewP", "BPM"]
+- !private ["7SwiftUI4ViewP", "BPMIntCheck"]
 - ["7SwiftUI4ViewP", "Body"]
+- !private ["7SwiftUI4ViewP", "ForEach"]
+- !private ["7SwiftUI4ViewP", "Int"]
+- !private ["7SwiftUI4ViewP", "Note"]
+- !private ["7SwiftUI4ViewP", "NotesList"]
+- !private ["7SwiftUI4ViewP", "Picker"]
 - !private ["7SwiftUI4ViewP", "RoundedBorderTextFieldStyle"]
+- !private ["7SwiftUI4ViewP", "Text"]
 - !private ["7SwiftUI4ViewP", "TextField"]
+- !private ["7SwiftUI4ViewP", "VStack"]
 - ["7SwiftUI4ViewP", ""]
 - ["7SwiftUI4ViewP", "_Default_Body"]
 - ["7SwiftUI4ViewP", "_makeView"]
 - ["7SwiftUI4ViewP", "_makeViewList"]
 - ["7SwiftUI4ViewP", "body"]
+- !private ["7SwiftUI4ViewP", "calcQuarterNotes"]
+- !private ["7SwiftUI4ViewP", "font"]
+- !private ["7SwiftUI4ViewP", "foregroundColor"]
 - !private ["7SwiftUI4ViewP", "frame"]
+- !private ["7SwiftUI4ViewP", "headline"]
 - !private ["7SwiftUI4ViewP", "init"]
+- !private ["7SwiftUI4ViewP", "keyboardType"]
+- !private ["7SwiftUI4ViewP", "red"]
+- !private ["7SwiftUI4ViewP", "tag"]
 - !private ["7SwiftUI4ViewP", "textFieldStyle"]
+- !private ["7SwiftUI11ViewBuilderV", "buildBlock"]
+- !private ["7SwiftUI11ViewBuilderV", "buildEither"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["7SwiftUI18_FormatSpecifiableP", "init"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "headline"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "red"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["7SwiftUI16_PreviewProviderP", "ContentView"]
 - ["7SwiftUI16_PreviewProviderP", "Previews"]
 - ["7SwiftUI16_PreviewProviderP", ""]
@@ -84,15 +265,73 @@ depends-member:
 - ["7SwiftUI16_PreviewProviderP", "platform"]
 - ["7SwiftUI16_PreviewProviderP", "previews"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
+- !private "Sa"
+- !private "SK"
+- !private "Sz"
+- !private "s7CVarArgP"
+- !private "SN"
+- !private "Sl"
+- !private "7SwiftUI5ColorV"
+- !private "SL"
 - "7calcBPM11ContentViewV"
 - "7calcBPM20ContentView_PreviewsV"
+- !private "10Foundation15ContiguousBytesP"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
 - "7SwiftUI15DynamicPropertyP"
+- !private "7SwiftUI18DynamicViewContentP"
+- !private "SE"
+- !private "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByIntegerLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s17FixedWidthIntegerP"
+- !private "7SwiftUI4FontV"
+- !private "7SwiftUI7ForEachV"
+- !private "7SwiftUI7GestureP"
+- !private "SH"
+- !private "Si"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "Sj"
+- !private "Sq"
+- !private "7SwiftUI6PickerV"
 - "7SwiftUI15PreviewProviderP"
+- !private "Sk"
+- !private "SX"
+- !private "Sm"
+- !private "SY"
 - !private "7SwiftUI27RoundedBorderTextFieldStyleV"
+- !private "s10SIMDScalarP"
+- !private "ST"
+- !private "7SwiftUI10ShapeStyleP"
+- !private "SZ"
+- !private "s13SignedNumericP"
 - "7SwiftUI5StateV"
+- !private "Sx"
+- !private "7SwiftUI18LocalizedStringKeyV0D13InterpolationV"
+- !private "s27StringInterpolationProtocolP"
+- !private "7SwiftUI4TextV"
 - !private "7SwiftUI9TextFieldV"
 - !private "7SwiftUI14TextFieldStyleP"
+- !private "So14UIKeyboardTypeV"
+- !private "7SwiftUI6VStackV"
 - "7SwiftUI4ViewP"
+- !private "7SwiftUI11ViewBuilderV"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "7SwiftUI18_FormatSpecifiableP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "s21_ObjectiveCBridgeableP"
 - "7SwiftUI16_PreviewProviderP"
 depends-dynamic-lookup:
 depends-external:
@@ -143,4 +382,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "12c3ca0b80194e31d17d6f2aafc8e33f"
+interface-hash: "f39de309b2c9ce58ece30e2a96699e8f"

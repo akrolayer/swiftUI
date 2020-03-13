@@ -8,50 +8,43 @@
 
 import SwiftUI
 
-extension UIApplication{
-    func endEditing(){
-        sendAction(#selector(UIResponder.resignFirstResponder),
-                   to: nil, from: nil, for: nil)
-    }
-}
-
 struct ContentView: View {
     @State var BPM: String = ""
     @State var Notes: String = ""
+    @State var Note: Int = 0
+    let NotesList = ["4", "8", "12", "16", "24", "32", "48", "64"]
     var body: some View {
-        ZStack {
-            Color.white
-                .onTapGesture {
-                    UIApplication.shared.endEditing()
-            }
-            VStack{
-                TextField("BPMを入力してください", text:$BPM)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .frame(width: 250)
-                
-                TextField("何分音符か入力してください", text: $Notes)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .keyboardType(.numberPad)
-                    .frame(width:250)
-                Group{
-                    if BPMIntCheck(BPM: BPM){
-                        if NotesCheck(Notes: Notes){
-                            Text("\(calcQuarterNotes(BPM: BPM, Notes: Notes))の４分")
-                        }else{
-                            Text("4分以上の存在する音符を入力してください")
-                            .foregroundColor(.red)
-                            .font(.headline)
-                        }
+        VStack{
+            Text("BPM変換ツール")
+                .font(.largeTitle)
+            Spacer()
+            Text("4分音符に換算したときのBPMを計算します")
+                .font(.title)
+            Spacer()
+            TextField("BPMを入力してください", text:$BPM)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+                .frame(width: 250)
+            /*
+            TextField("何分音符か入力してください", text: $Notes)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .keyboardType(.numberPad)
+                .frame(width:250)
+            */
+            if BPMIntCheck(BPM: BPM){
+                Picker(selection: $Note, label: Text("何分音符ですか？")) {
+                    ForEach(0..<NotesList.count){
+                            Text(self.NotesList[$0])
                     }
-                    else{
-                        Text("BPMは10〜1000を入力してください")
-                            .foregroundColor(.red)
-                            .font(.headline)
-                    }
-                    
                 }
-                
+                Text("\(calcQuarterNotes(BPM: BPM, Notes: NotesList[Note]))の４分")
+                        .font(.headline)
+                        .foregroundColor(.green)
+            }
+            else{
+                Text("BPMは10〜1000を入力してください")
+                    .foregroundColor(.red)
+                    .font(.headline)
             }
         }
     }
@@ -61,13 +54,15 @@ struct ContentView: View {
         }
         return (10...1000).contains(bpm)
     }
-    
+    /*
     func NotesCheck (Notes: String)-> Bool{
         guard let notes = Int(Notes) else{
             return false
         }
-        return notes & (notes-1) == 0 || notes / 3 * 4 % 16 == 0
+        if(notes < 4) {return false}
+        return (notes & (notes-1) == 0) || notes % 16 == 0
     }
+ */
     
     func calcQuarterNotes(BPM: String, Notes: String)-> Int{
         guard var bpm = Int(BPM) else { return 0 }
@@ -88,6 +83,7 @@ struct ContentView: View {
             return bpm
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
