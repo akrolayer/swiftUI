@@ -7,30 +7,25 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     @State var BPM: String = ""
     @State var Notes: String = ""
     @State var Note: Int = 0
     let NotesList = ["4", "8", "12", "16", "24", "32", "48", "64"]
+    var sound: AVAudioPlayer?
+    
     var body: some View {
         VStack{
             Text("BPM変換ツール")
                 .font(.largeTitle)
-            Spacer()
             Text("4分音符に換算したときのBPMを計算します")
                 .font(.title)
-            Spacer()
             TextField("BPMを入力してください", text:$BPM)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numberPad)
                 .frame(width: 250)
-            /*
-            TextField("何分音符か入力してください", text: $Notes)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
-                .frame(width:250)
-            */
             if BPMIntCheck(BPM: BPM){
                 Picker(selection: $Note, label: Text("何分音符ですか？")) {
                     ForEach(0..<NotesList.count){
@@ -46,6 +41,12 @@ struct ContentView: View {
                     .foregroundColor(.red)
                     .font(.headline)
             }
+            
+            Button(action: {
+                
+            }) {
+                Text("play audio")
+            }
         }
     }
     func BPMIntCheck (BPM: String)-> Bool{
@@ -54,16 +55,6 @@ struct ContentView: View {
         }
         return (10...1000).contains(bpm)
     }
-    /*
-    func NotesCheck (Notes: String)-> Bool{
-        guard let notes = Int(Notes) else{
-            return false
-        }
-        if(notes < 4) {return false}
-        return (notes & (notes-1) == 0) || notes % 16 == 0
-    }
- */
-    
     func calcQuarterNotes(BPM: String, Notes: String)-> Int{
         guard var bpm = Int(BPM) else { return 0 }
         guard var notes = Int(Notes) else { return 0 }
@@ -83,7 +74,6 @@ struct ContentView: View {
             return bpm
         }
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -91,3 +81,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

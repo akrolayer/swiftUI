@@ -4,6 +4,7 @@
 <array>
 	<string>calcBPM</string>
 	<string>SwiftUI</string>
+	<string>AVFoundation</string>
 	<string>UIKit</string>
 	<string>XCTest</string>
 </array>
