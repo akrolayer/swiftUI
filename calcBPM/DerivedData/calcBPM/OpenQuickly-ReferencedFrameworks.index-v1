@@ -2,10 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<string>calcBPM</string>
+	<string>XCTest</string>
 	<string>SwiftUI</string>
 	<string>AVFoundation</string>
+	<string>calcBPM</string>
 	<string>UIKit</string>
-	<string>XCTest</string>
+	<string>Combine</string>
 </array>
 </plist>

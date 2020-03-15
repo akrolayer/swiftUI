@@ -7,17 +7,19 @@
 //
 
 import AVFoundation
+import Combine
 
-var sound: AVAudioPlayer?
-
-func playSound(){
-    if let path = Bundle.main.path(forResource: "2_cymbal", ofType: "mp3"){
-        do{
-            sound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            print("Playing sound")
-            sound?.play()
-        }catch{
-            print("Could not file path")
+class AudioPlayer: ObservableObject {
+    func playSound(){
+        var sound = AVAudioPlayer()
+        if let path = Bundle.main.path(forResource: "2_cymbal", ofType: "mp3"){
+            do{
+                sound = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                print("Playing sound")
+                sound.play()
+            }catch{
+                print("Could not file path")
+            }
         }
     }
 }

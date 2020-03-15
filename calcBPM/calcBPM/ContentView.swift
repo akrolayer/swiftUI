@@ -9,43 +9,57 @@
 import SwiftUI
 import AVFoundation
 
+extension UIApplication{
+    func endEditting(){
+        sendAction(#selector(UIResponder.resignFirstResponder),
+                   to:nil, from: nil, for: nil
+        )
+    }
+}
+
 struct ContentView: View {
     @State var BPM: String = ""
     @State var Notes: String = ""
     @State var Note: Int = 0
     let NotesList = ["4", "8", "12", "16", "24", "32", "48", "64"]
-    var sound: AVAudioPlayer?
+    @EnvironmentObject var audioPlayer: AudioPlayer
     
     var body: some View {
-        VStack{
-            Text("BPM変換ツール")
-                .font(.largeTitle)
-            Text("4分音符に換算したときのBPMを計算します")
-                .font(.title)
-            TextField("BPMを入力してください", text:$BPM)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .keyboardType(.numberPad)
-                .frame(width: 250)
-            if BPMIntCheck(BPM: BPM){
-                Picker(selection: $Note, label: Text("何分音符ですか？")) {
-                    ForEach(0..<NotesList.count){
-                            Text(self.NotesList[$0])
-                    }
-                }
-                Text("\(calcQuarterNotes(BPM: BPM, Notes: NotesList[Note]))の４分")
-                        .font(.headline)
-                        .foregroundColor(.green)
-            }
-            else{
-                Text("BPMは10〜1000を入力してください")
-                    .foregroundColor(.red)
-                    .font(.headline)
+        ZStack {
+            Color.white.onTapGesture {
+                UIApplication.shared.endEditting()
             }
             
-            Button(action: {
+            VStack{
+                Text("BPM変換ツール")
+                    .font(.largeTitle)
+                Text("4分音符に換算したときのBPMを計算します")
+                    .font(.title)
+                TextField("BPMを入力してください", text:$BPM)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numberPad)
+                    .frame(width: 250)
+                if BPMIntCheck(BPM: BPM){
+                    Picker(selection: $Note, label: Text("何分音符ですか？")) {
+                        ForEach(0..<NotesList.count){
+                                Text(self.NotesList[$0])
+                        }
+                    }
+                    Text("\(calcQuarterNotes(BPM: BPM, Notes: NotesList[Note]))の４分")
+                            .font(.headline)
+                            .foregroundColor(.green)
+                }
+                else{
+                    Text("BPMは10〜1000を入力してください")
+                        .foregroundColor(.red)
+                        .font(.headline)
+                }
                 
-            }) {
-                Text("play audio")
+                Button(action: {
+                    self.audioPlayer.playSound()
+                }) {
+                    Text("play audio")
+                }
             }
         }
     }

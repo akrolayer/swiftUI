@@ -6,6 +6,74 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>20C5AEA5-1355-48C7-AC8F-0C242506E412</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>20C5AEA5-1355-48C7-AC8F-0C242506E412.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>calcBPM project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>calcBPM</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug calcBPM</string>
+			<key>timeStartedRecording</key>
+			<real>605974966.45758402</real>
+			<key>timeStoppedRecording</key>
+			<real>605975292.75879395</real>
+			<key>title</key>
+			<string>Debug calcBPM</string>
+			<key>uniqueIdentifier</key>
+			<string>20C5AEA5-1355-48C7-AC8F-0C242506E412</string>
+		</dict>
+		<key>37612DD1-5E2E-470F-9EC5-A1B4D53F2CD7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>37612DD1-5E2E-470F-9EC5-A1B4D53F2CD7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>calcBPM project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>calcBPM</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug calcBPM</string>
+			<key>timeStartedRecording</key>
+			<real>605976115.79604304</real>
+			<key>timeStoppedRecording</key>
+			<real>605976322.96362698</real>
+			<key>title</key>
+			<string>Debug calcBPM</string>
+			<key>uniqueIdentifier</key>
+			<string>37612DD1-5E2E-470F-9EC5-A1B4D53F2CD7</string>
+		</dict>
 		<key>5DEA0F24-38E6-4317-8718-76AD7C0645B4</key>
 		<dict>
 			<key>className</key>
@@ -39,6 +107,40 @@
 			<string>Debug calcBPM</string>
 			<key>uniqueIdentifier</key>
 			<string>5DEA0F24-38E6-4317-8718-76AD7C0645B4</string>
+		</dict>
+		<key>82131245-A6AD-4057-A0A4-780CE08E8195</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>82131245-A6AD-4057-A0A4-780CE08E8195.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>calcBPM project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>calcBPM</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug calcBPM</string>
+			<key>timeStartedRecording</key>
+			<real>605976323.07747495</real>
+			<key>timeStoppedRecording</key>
+			<real>605976466.86355698</real>
+			<key>title</key>
+			<string>Debug calcBPM</string>
+			<key>uniqueIdentifier</key>
+			<string>82131245-A6AD-4057-A0A4-780CE08E8195</string>
 		</dict>
 		<key>C34729D0-6C4A-4349-B3FC-BB120EE0E5DC</key>
 		<dict>
